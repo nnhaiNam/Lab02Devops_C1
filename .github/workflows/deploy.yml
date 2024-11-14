@@ -36,6 +36,7 @@ jobs:
         run: |
           cd ./TF_LAB02
           terraform init
+          terraform validate
 
       - name: Run Checkov on Terraform code
         working-directory: ./TF_LAB02
