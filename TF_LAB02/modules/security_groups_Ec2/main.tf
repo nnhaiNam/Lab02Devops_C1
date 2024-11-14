@@ -38,9 +38,7 @@ resource "aws_security_group" "public_sg" {
     
 }
 
-output "public_sg_id" {
-  value = aws_security_group.public_sg.id
-}
+
 
 resource "aws_security_group" "private_sg" {
     description = "Security Group for Private EC2 Instances"
@@ -68,6 +66,3 @@ resource "aws_security_group" "private_sg" {
   
 }
 
-output "private_sg_id" {
-  value = aws_security_group.private_sg.id
-}

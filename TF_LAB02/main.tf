@@ -44,7 +44,7 @@ module "public_ec2_instance" {
     ami = var.ami
     instance_type = var.instance_type
     subnet_id = module.vpc.public_subnet_id
-    security_group_ids = [module.security_groups_ec2.public_sg_id]
+    security_group_ids = [module.security_groups_ec2.public_sg_id,module.vpc.default_sg_id]
     key_name = var.key_name
     instance_name = "PUBLIC EC2 INSTANCE"
     associate_public_ip = true
@@ -58,7 +58,7 @@ module "private_ec2_instance" {
     ami = var.ami
     instance_type = var.instance_type
     subnet_id = module.vpc.private_subnet_id
-    security_group_ids = [module.security_groups_ec2.private_sg_id]
+    security_group_ids = [module.security_groups_ec2.private_sg_id,module.vpc.default_sg_id]
     key_name = var.key_name
     instance_name = "PRIVATE EC2 INSTACE"
     associate_public_ip = false

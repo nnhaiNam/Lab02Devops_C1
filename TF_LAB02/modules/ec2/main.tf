@@ -22,9 +22,6 @@ resource "aws_instance" "ec2" {
     }
 
 
-
-
-
 }
 
 # Elastic IP for Public EC2 instance
