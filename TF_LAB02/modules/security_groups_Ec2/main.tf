@@ -34,7 +34,12 @@ resource "aws_security_group" "public_sg" {
     tags = {
         Name = "${var.vpc_name}-public-ec2-sg"
     }
+   
     
+}
+
+output "public_sg_id" {
+  value = aws_security_group.public_sg.id
 }
 
 resource "aws_security_group" "private_sg" {
@@ -61,4 +66,8 @@ resource "aws_security_group" "private_sg" {
         Name = "${var.vpc_name}-private-ec2-sg"
     }
   
+}
+
+output "private_sg_id" {
+  value = aws_security_group.private_sg.id
 }

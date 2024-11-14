@@ -49,7 +49,6 @@ module "public_ec2_instance" {
     instance_name = "PUBLIC EC2 INSTANCE"
     associate_public_ip = true
     command = var.command
-
   
 }
 
