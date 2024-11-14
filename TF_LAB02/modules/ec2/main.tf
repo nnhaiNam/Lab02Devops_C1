@@ -9,9 +9,19 @@ resource "aws_instance" "ec2" {
     user_data = var.command
     
 
+
+    monitoring      = true 
+
+    metadata_options {
+      http_tokens = "required"  # Forces the use of IMDSv2 (IMDSv1 will be disabled)
+      http_endpoint = "enabled" # Enables the Instance Metadata Service
+    }
+
     tags = {
         Name=var.instance_name
     }
+
+
 
 
 
