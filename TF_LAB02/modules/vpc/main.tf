@@ -80,7 +80,7 @@ resource "aws_security_group" "default" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-    description = "Allow access to everywhere"
+     description = "Allow all outbound traffic"
   }
 
   tags = {
