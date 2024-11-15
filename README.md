@@ -14,5 +14,5 @@ SECURITY GROUP
 
 +B5: Tạo file deploy.yml trong folder workflows
 
-+B6: Tiến hành git add . -> git commit -> git push origin main để thực hiện deploy các resource
++B6: Tiến hành git add . -> git commit -m "" -> git push origin main để thực hiện deploy các resource
 trên AWS
