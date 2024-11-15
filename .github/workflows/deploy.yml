@@ -61,35 +61,18 @@ jobs:
         run: terraform validate
         working-directory: ./TF_LAB02/modules/s3_bucket
 
-      # - name: Terraform Plan
-      #   id: plan
-      #   run: terraform plan
-      #   working-directory: ./TF_LAB02/modules/s3_bucket
-        
       - name: Terraform Plan
         id: plan
-        run: terraform plan -out=tfplan
+        run: terraform plan
         working-directory: ./TF_LAB02/modules/s3_bucket
-    
-      - name: Check for Changes
-        id: check_changes
-        run: |
-          terraform show -json tfplan | jq '.resource_changes | length' > changes.txt
-          changes=$(cat changes.txt)
-          if [ "$changes" -eq "0" ]; then
-            echo "No changes detected."
-            echo "::set-output name=apply_needed::false"
-          else
-            echo "Changes detected."
-            echo "::set-output name=apply_needed::true"
-          fi
-        working-directory: ./TF_LAB02/modules/s3_bucket
-  
+
+         
       - name: Terraform Apply
-        if: steps.check_changes.outputs.apply_needed == 'true'
         id: apply
-        run: terraform apply --auto-approve tfplan
+        run: terraform apply --auto-approve
         working-directory: ./TF_LAB02/modules/s3_bucket
+        
+      
      
 
      
