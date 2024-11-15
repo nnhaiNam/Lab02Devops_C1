@@ -7,7 +7,7 @@ terraform {
   }
 
     backend "s3" {
-    bucket = "bucket-hari-nem-nem"
+    bucket = "mynewbucketnemnem"
     key    = "dev/terraform.tfstate"
     region = "us-east-1"
   }
