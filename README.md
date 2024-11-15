@@ -16,3 +16,9 @@ SECURITY GROUP
 
 +B6: Tiến hành git add . -> git commit -m "" -> git push origin main để thực hiện deploy các resource
 trên AWS
+
+LƯU Ý:
+Nếu muốn destroy các resources trên AWS, ta thực hiện:
++B1: cd TF_LAB02
++B2: Dùng lệnh terraform init để tạo backend từ file terraform.tfstate trên S3
++B3: terraform destroy 
