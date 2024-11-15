@@ -73,8 +73,7 @@ jobs:
   #       working-directory: ./TF_LAB02/modules/s3_bucket
         
       
-     
-
+  
      
 
   build-infra:
