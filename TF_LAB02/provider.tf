@@ -1,9 +1,3 @@
-
-#Bucket
-module "bucket" {
-    source = "./modules/s3_bucket"  
-}
-
 terraform {
   required_providers {
     aws = {
