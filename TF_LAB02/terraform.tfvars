@@ -6,6 +6,6 @@ private_subnet_cidr = "10.0.3.0/24"
 
 availability_zone = "us-east-1a"
 
-vpc_name = "HariNem_VPC"
+vpc_name = "HariNem"
 
 my_ip_adress = "113.161.91.0/24"

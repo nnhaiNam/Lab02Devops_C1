@@ -6,6 +6,10 @@ resource "aws_route_table" "public_rt" {
         gateway_id = var.internet_gateway_id
 
     }
+
+     tags = {
+        Name = "Route for Internet Gateway"
+    }
 }
 
 resource "aws_route_table" "private_rt" {
@@ -15,6 +19,12 @@ resource "aws_route_table" "private_rt" {
         cidr_block = "0.0.0.0/0"
         nat_gateway_id = var.nat_gateway_id
     }
+
+    tags = {
+        Name = "Route for NAT"
+    }
+
+
 
 }
 
