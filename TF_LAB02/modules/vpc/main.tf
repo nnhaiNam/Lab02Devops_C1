@@ -48,7 +48,7 @@ resource "aws_internet_gateway" "igw" {
 # checkov:skip=CKV2_AWS_5: Security Group attached to resource in separate module
 resource "aws_security_group" "default" {
   vpc_id = aws_vpc.main_vpc.id
-  name   = "default_sg"
+  name   = "Default Security Group"
   description = "Default Security Group for VPC"
 
   # Cho phép tất cả lưu lượng nội bộ trong VPC
