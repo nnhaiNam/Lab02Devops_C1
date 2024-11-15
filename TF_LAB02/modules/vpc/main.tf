@@ -49,7 +49,7 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_security_group" "default" {
   vpc_id = aws_vpc.main_vpc.id
   name   = "Default Security Group"
-  description = "Default Security Group for VPC"
+  description = "Default Security Group"
 
   # Cho phép tất cả lưu lượng nội bộ trong VPC
   ingress {
@@ -86,7 +86,7 @@ resource "aws_security_group" "default" {
   }
 
   tags = {
-    Name = "${var.vpc_name}-default-sg"
+    Name = "${var.vpc_name}-DefaultSecurityGroup"
   }
 }
 
