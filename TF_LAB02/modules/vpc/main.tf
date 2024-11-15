@@ -86,7 +86,7 @@ resource "aws_security_group" "default" {
   }
 
   tags = {
-    Name = "${var.vpc_name}-DefaultSecurityGroup"
+    Name = "${var.vpc_name}-Default-SecurityGroup"
   }
 }
 
