@@ -45,6 +45,7 @@ resource "aws_internet_gateway" "igw" {
 
 
 #Default Security Group for VPC
+# checkov:skip=CKV2_AWS_5: Security Group attached to resource in separate module
 resource "aws_security_group" "default" {
   vpc_id = aws_vpc.main_vpc.id
   name   = "default_sg"

@@ -66,29 +66,7 @@ module "private_ec2_instance" {
   
 }
 
-#Resource EC2 check
-resource "aws_instance" "ec2" {
-    ami = var.ami
-    instance_type = var.instance_type
-    subnet_id = module.vpc.public_subnet_id
-    vpc_security_group_ids =[module.security_groups_ec2.private_sg_id,module.vpc.default_sg_id]
-    key_name = var.key_name 
-    
 
-
-    monitoring      = true 
-
-    metadata_options {
-      http_tokens = "required"  # Forces the use of IMDSv2 (IMDSv1 will be disabled)
-      http_endpoint = "enabled" # Enables the Instance Metadata Service
-    }
-
-    tags = {
-        Name="Instances Test"
-    }
-
-
-}
 
 
 
