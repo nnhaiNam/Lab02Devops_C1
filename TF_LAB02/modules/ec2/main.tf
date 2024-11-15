@@ -32,7 +32,7 @@ resource "aws_eip" "public_eip" {
   instance = aws_instance.ec2.id
 
   tags = {
-    Name = "PublicEIP-${aws_instance.ec2.id}"
+    Name = "Public-EC2-EIP-${aws_instance.ec2.id}"
   }
-  
+
 }
