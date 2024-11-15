@@ -26,3 +26,8 @@ resource "aws_s3_bucket" "s3" {
   }
 
 }
+
+output "bucket_name_check_result" {
+  value = try(data.null_data_source.existing_bucket_check.outputs["bucket_name"], "Bucket does not exist or output is empty")
+}
+
