@@ -13,6 +13,7 @@ module "vpc" {
 module "nat_gateway" {
     source = "./modules/nat_gateway"
     public_subnet_id = module.vpc.public_subnet_id
+    vpc_name = var.vpc_name
   
 }
 
