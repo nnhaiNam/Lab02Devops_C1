@@ -24,6 +24,7 @@ resource "aws_instance" "ec2" {
 
 }
 
+# checkov:skip=CKV2_AWS_19:Only assign EIP for public EC2 instances
 # Elastic IP for Public EC2 instance
 resource "aws_eip" "public_eip" {
   count    = var.associate_public_ip ? 1 : 0
