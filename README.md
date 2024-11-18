@@ -19,6 +19,13 @@ trên AWS
 
 LƯU Ý:
 Nếu muốn destroy các resources trên AWS, ta thực hiện:
+
 +B1: cd TF_LAB02
+
 +B2: Dùng lệnh terraform init để tạo backend từ file terraform.tfstate trên S3
+
 +B3: terraform destroy 
+
+
+Để thay đổi IP cụ thể để SSH tới EC2 instances => Thay đổi giá trị của biến my_ip_address trong
+file terrafrom.tfvars
